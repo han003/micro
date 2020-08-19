@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+    database:
+        image: mysql:8.0
+        restart: always
+        environment:
+            MYSQL_DATABASE: "db"
+            MYSQL_USER: "root"
+            MYSQL_ROOT_PASSWORD: "root"
+        ports:
+            - "3306:3306"
+        volumes:
+            - db:/var/lib/mysql
+            
+    client:
+        image: nginx
+        ports:
+            - "8080:80"
+        volumes:
+            - ./web:/usr/share/nginx/html
+
+    go:
+        build:
+            context: go
+        
+
+volumes:
+    db:
