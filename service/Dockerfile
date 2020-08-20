@@ -2,7 +2,8 @@ FROM golang:latest as builder
 
 WORKDIR /app
 
-ADD go.* .
+ADD go.mod .
+ADD go.sum .
 
 RUN go mod download
 
