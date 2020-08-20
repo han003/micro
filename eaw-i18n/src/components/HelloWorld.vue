@@ -12,7 +12,7 @@ export default class HelloWorld extends Vue {
   msg: string;
 
   get mymsg(): string {
-    return this.msg ?? 'null';
+    return this.msg ?? 'awesome';
   }
 }
 </script>
