@@ -18,7 +18,7 @@ services:
         ports:
             - "8080:80"
         volumes:
-            - ./ui/dist:/usr/share/nginx/html
+            - ./eaw-i18n/dist:/usr/share/nginx/html
 
     service:
         build:
