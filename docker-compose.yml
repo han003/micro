@@ -18,7 +18,7 @@ services:
         ports:
             - "8080:80"
         volumes:
-            - ./ui:/usr/share/nginx/html
+            - ./ui/dist:/usr/share/nginx/html
 
     service:
         build:
