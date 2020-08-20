@@ -1,6 +1,10 @@
 <template>
   <div class="hello">
-    <h1>{{ mymsg }}</h1>
+    <a v-bind:href="website">GOOGLE</a>
+    <input type="text" v-model="name" v-on:keyup="nameUpdated" />
+    <input type="text" v-model="name2" v-on:keyup="name2Updated" />
+
+    <div>Your name is {{ name }}</div>
   </div>
 </template>
 
@@ -9,10 +13,19 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class HelloWorld extends Vue {
-  msg: string;
+  name = 'Random';
+  name2 = 'Random2';
+  website = 'http://google.com';
+  a = 2;
 
-  get mymsg(): string {
-    return this.msg ?? 'awesome';
+  nameUpdated() {
+    console.log('name', this.name);
+
+    this.name2 += 'ha';
+  }
+
+  name2Updated() {
+    console.log('name2', this.name2);
   }
 }
 </script>
