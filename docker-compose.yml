@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3"
 
 services:
     database:
@@ -20,9 +20,11 @@ services:
         volumes:
             - ./web:/usr/share/nginx/html
 
-    go:
+    service:
         build:
-            context: go
+            context: service
+        ports:
+            - "9090:9090"
         
 
 volumes:

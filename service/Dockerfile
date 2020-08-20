@@ -1,12 +1,12 @@
 FROM golang:latest as builder
 
-WORKDIR /go/src/app
+WORKDIR /app
 
-RUN go get -d -v github.com/gorilla/mux \
-	&& go get -d -v gopkg.in/mgo.v2/bson \
-	&& go get -d -v gopkg.in/mgo.v2
+ADD go.* .
 
-COPY main.go .
+RUN go mod download
+
+ADD main.go .
 
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
 
@@ -18,6 +18,6 @@ EXPOSE 9090
 
 WORKDIR /root/
 
-COPY --from=builder /go/src/app .
+COPY --from=builder /app/app .
 
 CMD ["./app"]  
