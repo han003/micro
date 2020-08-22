@@ -26,7 +26,7 @@ func main() {
 	})
 
 	// CORS
-	ch := gohandlers.CORS(gohandlers.AllowedOrigins([]string{"http://localhost:8080"}))
+	ch := gohandlers.CORS(gohandlers.AllowedOrigins([]string{"http://localhost:8081"}))
 
 	// Create a new server
 	s := http.Server{

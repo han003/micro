@@ -10,6 +10,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import axios from 'axios';
 
 @Component
 export default class HelloWorld extends Vue {
@@ -17,6 +18,20 @@ export default class HelloWorld extends Vue {
   name2 = 'Random2';
   website = 'http://google.com';
   a = 2;
+
+  mounted(): void {
+    console.log('mounted');
+
+    this.getData().then(resp => {
+      console.log('Got data');
+    });
+  }
+
+  getData(): Promise<any> {
+    return axios.get('http://localhost:9090').then(resp => {
+      console.log(resp);
+    });
+  }
 
   nameUpdated() {
     console.log('name', this.name);
