@@ -13,7 +13,7 @@ import { Component, Vue } from 'vue-property-decorator';
 import axios from 'axios';
 
 @Component
-export default class HelloWorld extends Vue {
+export default class Home extends Vue {
   name = 'Random';
   name2 = 'Random2';
   website = 'http://google.com';
@@ -44,8 +44,6 @@ export default class HelloWorld extends Vue {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 h3 {
   margin: 40px 0 0;
