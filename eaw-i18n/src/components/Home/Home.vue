@@ -5,6 +5,8 @@
     <input type="text" v-model="name2" v-on:keyup="name2Updated" />
 
     <div>Your name is {{ name }}</div>
+
+    <md-button class="md-raised">test</md-button>
   </div>
 </template>
 
