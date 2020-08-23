@@ -13,6 +13,7 @@ module.exports = {
     'lines-between-class-members': 'off',
     'class-methods-use-this': ['warn'],
     'arrow-parens': 'off',
+    'max-len': ['warn', {'code': 200}],
   },
   overrides: [
     {
