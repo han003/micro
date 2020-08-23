@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  database:
+  db:
     image: mysql:8.0
     restart: always
     environment:
@@ -9,7 +9,7 @@ services:
       MYSQL_USER: 'root'
       MYSQL_ROOT_PASSWORD: 'root'
     ports:
-      - '3306:3306'
+      - '3310:3306'
     volumes:
       - db:/var/lib/mysql
 

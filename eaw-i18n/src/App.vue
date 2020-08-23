@@ -25,7 +25,7 @@
       </md-app-drawer>
 
       <md-app-content>
-        <router-view/>
+        <router-view />
         <!--      <router-link to="/about">About</router-link>-->
       </md-app-content>
     </md-app>
