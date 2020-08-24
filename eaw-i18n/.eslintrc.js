@@ -14,6 +14,7 @@ module.exports = {
     'class-methods-use-this': ['warn'],
     'arrow-parens': 'off',
     'max-len': ['warn', {'code': 200}],
+    'linebreak-style': 'off',
   },
   overrides: [
     {

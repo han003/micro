@@ -18,6 +18,12 @@ services:
       context: service
     ports:
       - '9090:9090'
+    environment:
+      - "DB_USERNAME=root"
+      - "DB_PASSWORD=root"
+      - "DB_HOST=db"
+      - "DB_DATABASE=db"
+    command: "-migrate -continue"
 
 volumes:
   db:

@@ -2,6 +2,8 @@ package main
 
 import (
 	"context"
+	"database/sql"
+	"flag"
 	"fmt"
 	"log"
 	"net/http"
@@ -18,6 +20,11 @@ const (
 )
 
 func main() {
+
+	var db = getDb()
+
+
+	handleMigration(db)
 	sm := mux.NewRouter()
 
 	getR := sm.Methods(http.MethodGet).Subrouter()
@@ -60,4 +67,46 @@ func main() {
 	// gracefully shutdown the server, waiting max 30 seconds for current operations to complete
 	ctx, _ := context.WithTimeout(context.Background(), 30*time.Second)
 	s.Shutdown(ctx)
+}
+
+func handleMigration(db *sql.DB) {
+	shouldMigrate := flag.Bool("migrate", false, "Pass this flag to migrate")
+	continueExecAfterMigrate := flag.Bool("continue", false, "Pass this flag to continue execution after migration")
+	back := flag.Bool("rewind", false, "Pass this flag to rewind")
+	steps := flag.Int("steps", 0, "Specify this number to decide how many steps to rewind")
+	flag.Parse()
+
+	if *shouldMigrate {
+		println("Migrating")
+		migrateDb(db, back, steps)
+		if !*continueExecAfterMigrate {
+			return
+		}
+	}
+}
+
+func getDb() *sql.DB {
+	username := os.Getenv("DB_USERNAME")
+	password := os.Getenv("DB_PASSWORD")
+	database := os.Getenv("DB_DATABASE")
+	host := os.Getenv("DB_HOST")
+
+	db, err := sql.Open("mysql", username+":"+password+"@tcp("+host+":3306)/"+database+"?parseTime=true&multiStatements=true")
+	if err != nil {
+		println("Could not connect to database")
+		println(err.Error())
+		log.Fatal(err)
+	}
+	var waited = 0
+	for pingErr := db.Ping(); pingErr != nil; {
+		println("Ping error: ", pingErr.Error())
+		time.Sleep(1 * time.Second)
+		waited++
+		println("Waited ", waited, " seconds")
+		if waited > 15 {
+			log.Fatal("Could not get db connection")
+		}
+	}
+
+	return db
 }

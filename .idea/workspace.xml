@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a5ecd38b-8bfa-4f93-acfc-202f3337158c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eaw-i18n/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/eaw-i18n/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eaw-i18n/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/eaw-i18n/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/1_create_vendors_table.down.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/1_create_vendors_table.up.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/service/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/service/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +50,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
@@ -32,14 +58,14 @@
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Joar\PhpstormProjects\micro\service" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="micro" />
       <working_directory value="$PROJECT_DIR$" />
@@ -48,8 +74,22 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="commandLineOptions" value="--build" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Go Build.go build main.go" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
@@ -69,11 +109,29 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
   <component name="WindowStateProjectService">
     <state x="752" y="353" key="#Go_Modules" timestamp="1597910815675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="353" key="#Go_Modules/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597910815675" />
+    <state x="208" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598273942032">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="208" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598273942032" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1597911121226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -90,10 +148,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597911121226" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1597910847467">
+    <state x="461" y="165" key="SettingsEditor" timestamp="1598273206194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597910847467" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598273206194" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1597910073562">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

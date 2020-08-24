@@ -7,7 +7,7 @@ ADD go.sum .
 
 RUN go mod download
 
-ADD main.go .
+ADD *.go ./
 
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
 
@@ -17,8 +17,11 @@ RUN apk --no-cache add curl
 
 EXPOSE 9090
 
-WORKDIR /root/
+WORKDIR /app/
 
 COPY --from=builder /app/app .
+ADD migrations ./migrations
 
-CMD ["./app"]  
+RUN ls
+
+ENTRYPOINT ["/app/app"]
